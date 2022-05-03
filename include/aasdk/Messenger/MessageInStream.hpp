@@ -31,15 +31,16 @@ private:
     transport::ITransport::Pointer transport_;
     ICryptor::Pointer cryptor_;
     //FrameType recentFrameType_;
-    FrameType thisFrameType_;
+	FrameType thisFrameType_;
     ReceivePromise::Pointer promise_;
-    ReceivePromise::Pointer interleavedPromise_;
+	ReceivePromise::Pointer interleavedPromise_;
     Message::Pointer message_;
-    
+	
     std::map<messenger::ChannelId, Message::Pointer> messageBuffer_;
-    
+	
     int frameSize_;
     bool isValidFrame_;
+    int currentMessageIndex_;
 };
 
 }
