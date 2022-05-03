@@ -15,4 +15,3 @@ enum class FrameType {
 std::string frameTypeToString(FrameType frameType);
 
 }
-}
