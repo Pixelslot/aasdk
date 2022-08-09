@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+package aasdk.proto.enums;
+message NavigationRequestState {
+  enum Enum
+  {
+    NAVIGATION_START = 1;
+    NAVIGATION_STOP = 2;
+  }
+}
+option optimize_for = SPEED;
+

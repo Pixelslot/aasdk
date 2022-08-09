@@ -1,0 +1,18 @@
+syntax="proto2";
+
+package aasdk.proto.enums;
+
+message AudioFocusType
+{
+  enum Enum
+  {
+    NONE = 0;
+    GAIN = 1;
+    GAIN_TRANSIENT = 2;
+    GAIN_NAVI = 3;
+    RELEASE = 4;
+  }
+}
+
+option optimize_for = SPEED;
+
