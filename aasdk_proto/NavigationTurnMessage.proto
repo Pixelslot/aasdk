@@ -15,4 +15,3 @@ message NavigationTurnMessage
   optional int32 turn_angle = 6;
 }
 option optimize_for = SPEED;
-
