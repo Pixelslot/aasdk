@@ -9,4 +9,3 @@ message NavigationRequestState {
   }
 }
 option optimize_for = SPEED;
-
