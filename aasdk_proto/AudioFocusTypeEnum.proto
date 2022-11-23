@@ -16,4 +16,3 @@ message AudioFocusType
 }
 
 option optimize_for = SPEED;
-
