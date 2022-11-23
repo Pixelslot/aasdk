@@ -13,4 +13,3 @@ message NavigationDistanceMessage
   optional enums.NavigationDistanceUnit.Enum display_distance_unit = 4;
 }
 option optimize_for = SPEED;
-
