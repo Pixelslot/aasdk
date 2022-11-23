@@ -9,4 +9,3 @@ message NavigationType {
   }
 }
 option optimize_for = SPEED;
-
