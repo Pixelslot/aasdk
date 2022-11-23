@@ -10,4 +10,3 @@ message NavigationRequestMessage
 }
 
 option optimize_for = SPEED;
-
