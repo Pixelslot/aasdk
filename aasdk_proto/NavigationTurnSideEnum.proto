@@ -10,4 +10,3 @@ message NavigationTurnSide {
   }
 }
 option optimize_for = SPEED;
-
