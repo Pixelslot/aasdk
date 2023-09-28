@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+package aasdk.proto.enums;
+message NavigationLaneIcon {
+    enum Enum
+    {
+      LaneIconID1 = 1;      
+      LaneIconID2 = 2; 
+      LaneIconID3 = 3;   
+      LaneIconID4 = 4;      
+      LaneIconID5 = 5;
+      LaneIconID6 = 6;         
+      LaneIconID7 = 7;
+      LaneIconID8 = 8;
+    }
+}
+option optimize_for = SPEED;
