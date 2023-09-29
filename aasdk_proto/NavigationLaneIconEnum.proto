@@ -4,7 +4,6 @@ package aasdk.proto.enums;
 message NavigationLaneIcon {
     enum Enum
     {
-      UNKNOWN = 0;
       LaneIconID1 = 1;      
       LaneIconID2 = 2; 
       LaneIconID3 = 3;   
