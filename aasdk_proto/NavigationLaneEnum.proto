@@ -1,7 +1,7 @@
 syntax = "proto2";
 
 package aasdk.proto.enums;
-message NavigationLaneIco {
+message NavigationLaneEvent {
     enum Enum
     {
       LaneIconID1 = 1;      
