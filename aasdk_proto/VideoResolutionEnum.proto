@@ -8,7 +8,7 @@ message VideoResolution
   {
     NONE = 0;
     _480p = 1;
-    _520p = 2
+    _520p = 2;
     _720p = 3;
     _1080p = 4;
   }
