@@ -1,6 +1,7 @@
 syntax="proto2";
 
 import "SensorTypeEnum.proto";
+import "GearData.proto";
 
 package aasdk.proto.messages;
 
@@ -8,6 +9,7 @@ message SensorStartRequestMessage
 {
   required enums.SensorType.Enum sensor_type = 1;
   required int64 refresh_interval = 2;
+  optional data.Gear gear_data = 3;
 }
 
 option optimize_for = SPEED;
