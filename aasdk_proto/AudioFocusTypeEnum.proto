@@ -9,9 +9,8 @@ message AudioFocusType
     NONE = 0;
     GAIN = 1;
     GAIN_TRANSIENT = 2;
-    GAIN_TRANSIENT_MAY_DUCK = 3;
-    GAIN_NAVI = 4;
-    RELEASE = 5; //was 5
+    GAIN_TRANSIENT_MAY_DUCK = 3;   
+    RELEASE = 4;
   }
 }
 
