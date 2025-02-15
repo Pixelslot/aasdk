@@ -6,9 +6,9 @@ message VideoFocusReason
 {
   enum Enum
   {
-    NONE = 0;
-    UNK_1 = 1;
-    UNK_2 = 2;
+    NONE = 0; //headunit 
+    UNK_1 = 1; //Android Auto 
+    UNK_2 = 2; //BACKUP_CAMERA
   }
 }
 
