@@ -29,15 +29,15 @@ IAccessoryModeQuery::Pointer AccessoryModeQueryFactory::createQuery(AccessoryMod
 
     case AccessoryModeQueryType::SEND_MANUFACTURER:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
-                                                              AccessoryModeSendStringType::MANUFACTURER, "Android");
+                                                              AccessoryModeSendStringType::MANUFACTURER, "Mazda");
 
     case AccessoryModeQueryType::SEND_MODEL:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
-                                                              AccessoryModeSendStringType::MODEL, "Android Auto");
+                                                              AccessoryModeSendStringType::MODEL, "Mazda CX-30");
 
     case AccessoryModeQueryType::SEND_SERIAL:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
-                                                              AccessoryModeSendStringType::SERIAL, "HU-AAAAAA001");
+                                                              AccessoryModeSendStringType::SERIAL, "HU-MAZDA-CX30");
 
     case AccessoryModeQueryType::SEND_URI:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
@@ -45,7 +45,7 @@ IAccessoryModeQuery::Pointer AccessoryModeQueryFactory::createQuery(AccessoryMod
 
     case AccessoryModeQueryType::SEND_VERSION:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
-                                                              AccessoryModeSendStringType::VERSION, "2.0.1");
+                                                              AccessoryModeSendStringType::VERSION, "1.0");
 
     case AccessoryModeQueryType::START:
         return std::make_shared<AccessoryModeStartQuery>(ioService_, usbWrapper_, std::move(usbEndpoint));
