@@ -25,7 +25,7 @@ IAccessoryModeQuery::Pointer AccessoryModeQueryFactory::createQuery(AccessoryMod
 
     case AccessoryModeQueryType::SEND_DESCRIPTION:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
-                                                              AccessoryModeSendStringType::DESCRIPTION, "Android Auto");
+                                                              AccessoryModeSendStringType::DESCRIPTION, "Mazda AA Interface");
 
     case AccessoryModeQueryType::SEND_MANUFACTURER:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
