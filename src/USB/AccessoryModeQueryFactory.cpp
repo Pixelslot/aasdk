@@ -29,15 +29,15 @@ IAccessoryModeQuery::Pointer AccessoryModeQueryFactory::createQuery(AccessoryMod
 
     case AccessoryModeQueryType::SEND_MANUFACTURER:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
-                                                              AccessoryModeSendStringType::MANUFACTURER, "Volvo");
+                                                              AccessoryModeSendStringType::MANUFACTURER, "Google");
 
     case AccessoryModeQueryType::SEND_MODEL:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
-                                                              AccessoryModeSendStringType::MODEL, "XC40");
+                                                              AccessoryModeSendStringType::MODEL, "Android Auto");
 
     case AccessoryModeQueryType::SEND_SERIAL:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
-                                                              AccessoryModeSendStringType::SERIAL, "HU-VOLVO-XC40");
+                                                              AccessoryModeSendStringType::SERIAL, "HU-GOOGLE-001");
 
     case AccessoryModeQueryType::SEND_URI:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
