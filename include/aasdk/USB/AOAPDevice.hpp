@@ -33,10 +33,13 @@ private:
     IUSBEndpoint::Pointer inEndpoint_;
     IUSBEndpoint::Pointer outEndpoint_;
 
-    static constexpr uint16_t cGoogleVendorId = 0x18D1;
-    static constexpr uint16_t cAOAPId = 0x2D00;
-    static constexpr uint16_t cAOAPWithAdbId = 0x2D01;
+    static constexpr uint16_t cGoogleVendorId = 0x04B4;  // Cypress (used by Volvo)
+    static constexpr uint16_t cAOAPId = 0xEE12;          // Volvo-style PID
 
+    /*static constexpr uint16_t cGoogleVendorId = 0x18D1;
+    static constexpr uint16_t cAOAPId = 0x2D00;
+    static constexpr uint16_t cAOAPWithAdbId = 0x2D01; */
+ 
     AOAPDevice(const AOAPDevice&) = delete;
 };
 
