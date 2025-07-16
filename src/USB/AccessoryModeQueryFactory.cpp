@@ -29,7 +29,7 @@ IAccessoryModeQuery::Pointer AccessoryModeQueryFactory::createQuery(AccessoryMod
 
     case AccessoryModeQueryType::SEND_MANUFACTURER:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
-                                                              AccessoryModeSendStringType::MANUFACTURER, "Volvo");
+                                                              AccessoryModeSendStringType::MANUFACTURER, "Google");
 
     case AccessoryModeQueryType::SEND_MODEL:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
@@ -41,11 +41,11 @@ IAccessoryModeQuery::Pointer AccessoryModeQueryFactory::createQuery(AccessoryMod
 
     case AccessoryModeQueryType::SEND_URI:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
-                                                              AccessoryModeSendStringType::URI, "https://f1xstudio.com");
+                                                              AccessoryModeSendStringType::URI, "https://www.google.com/maps");
 
     case AccessoryModeQueryType::SEND_VERSION:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
-                                                              AccessoryModeSendStringType::VERSION, "1.0");
+                                                              AccessoryModeSendStringType::VERSION, "2.0.1");
 
     case AccessoryModeQueryType::START:
         return std::make_shared<AccessoryModeStartQuery>(ioService_, usbWrapper_, std::move(usbEndpoint));
