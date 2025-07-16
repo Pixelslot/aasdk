@@ -29,7 +29,7 @@ IAccessoryModeQuery::Pointer AccessoryModeQueryFactory::createQuery(AccessoryMod
 
     case AccessoryModeQueryType::SEND_MANUFACTURER:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
-                                                              AccessoryModeSendStringType::MANUFACTURER, "Google");
+                                                              AccessoryModeSendStringType::MANUFACTURER, "Mazda");
 
     case AccessoryModeQueryType::SEND_MODEL:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
@@ -37,7 +37,7 @@ IAccessoryModeQuery::Pointer AccessoryModeQueryFactory::createQuery(AccessoryMod
 
     case AccessoryModeQueryType::SEND_SERIAL:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
-                                                              AccessoryModeSendStringType::SERIAL, "HU-GOOGLE-001");
+                                                              AccessoryModeSendStringType::SERIAL, "HU-AAAAAA001");
 
     case AccessoryModeQueryType::SEND_URI:
         return std::make_shared<AccessoryModeSendStringQuery>(ioService_, usbWrapper_, std::move(usbEndpoint),
