@@ -1,4 +1,5 @@
 #include <aasdk_proto/NavigationChannelMessageIdsEnum.pb.h>
+#include <aasdk_proto/NavigationState.pb.h>
 #include <aasdk/IO/PromiseLink.hpp>
 #include <aasdk/Channel/Navigation/NavigationChannel.hpp>
 #include <aasdk/Channel/Navigation/INavigationChannelEventHandler.hpp>
@@ -47,6 +48,10 @@ void NavigationChannel::messageHandler(const messenger::Message::Pointer& messag
       this->handleNavigationDistance(payload,
                                      eventHandler);
       break;
+    case proto::ids::NavigationChannelMessage::NAVIGATION_STATE:
+      this->handleNavigationState(payload,
+                                  eventHandler);
+      break;
     case proto::ids::ControlMessage::CHANNEL_OPEN_REQUEST:
       this->handleChannelOpenRequest(payload, eventHandler);
       break;
@@ -81,6 +86,16 @@ void NavigationChannel::handleNavigationDistance(const common::DataConstBuffer &
   proto::messages::NavigationDistanceMessage request;
   if (request.ParseFromArray(payload.cdata, payload.size)) {
     eventHandler->onNavigationDistance(request);
+  } else {
+    eventHandler->onChannelError(error::Error(error::ErrorCode::PARSE_PAYLOAD));
+  }
+}
+
+void NavigationChannel::handleNavigationState(const common::DataConstBuffer &payload,
+                                              const INavigationChannelEventHandler::Pointer& eventHandler) {
+  proto::enums::NavigationState state;
+  if (state.ParseFromArray(payload.cdata, payload.size)) {
+    eventHandler->onNavigationState(state);
   } else {
     eventHandler->onChannelError(error::Error(error::ErrorCode::PARSE_PAYLOAD));
   }
