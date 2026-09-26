@@ -28,6 +28,8 @@ class NavigationChannel
                             const INavigationChannelEventHandler::Pointer& eventHandler);
   void handleNavigationDistance(const common::DataConstBuffer &payload,
                                 const INavigationChannelEventHandler::Pointer& eventHandler);
+  void handleNavigationState(const common::DataConstBuffer &payload,
+                             const INavigationChannelEventHandler::Pointer& eventHandler);
 };
 
 }
