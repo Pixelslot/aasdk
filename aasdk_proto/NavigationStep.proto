@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package aasdk.proto.enums;
+
+import "NavigationLane.proto";
+
+message NavigationStep {
+  repeated NavigationLane lanes = 3;
+}
