@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package aasdk.proto.enums;
+
+import "NavigationStep.proto";
+
+message NavigationState {
+  repeated NavigationStep steps = 1;
+}
