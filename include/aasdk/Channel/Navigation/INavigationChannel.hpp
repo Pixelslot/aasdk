@@ -8,7 +8,6 @@
 #include <aasdk_proto/NavigationRequestMessage.pb.h>
 #include <aasdk_proto/NavigationRequestStateEnum.pb.h>
 #include <aasdk_proto/NavigationTurnEventEnum.pb.h>
-#include <aasdk_proto/NavigationLaneEventEnum.pb.h>
 #include <aasdk_proto/NavigationTurnMessage.pb.h>
 #include <aasdk_proto/NavigationTurnSideEnum.pb.h>
 #include <aasdk/Common/Data.hpp>
